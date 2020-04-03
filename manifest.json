@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "YouTube Save Current Time",
+  "description": "A lightweight browser extension to save the current time spent in any YouTube video, for those who don't trust in the video player.",
+  "author": "Micael Levi L. C.",
+  "version": "1.0.0",
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  
+  "browser_action": {},
+
+  "icons": {
+    "96": "icons/timer-96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://youtube.com/*", "https://youtube.com/*", "https://www.youtube.com/*", "http://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
